@@ -1,11 +1,14 @@
-{ lib, config, pkgs, ... };
+{ lib, config, pkgs, ... }:
 
+let
+  cfg = config.main-user;
+in
 {
-  options = {
-    main-user.enable
+  options.main-user = {
+    enable 
       = lib.mkEnableOption "enable user module";
 
-    main-user.userName = lib.mkOption {
+    userName = lib.mkOption {
       default = "mainuser";
       description = ''
         username
@@ -13,11 +16,11 @@
     };
   };
 
-  config = lib.mkIf config.main-user.enable {
-    users.users.${config.main-user.userName} = {
-     isNormalUser= true;
-     description = "main user";
+  config = lib.mkIf cfg.enable {
+    users.users.${cfg.userName} = {
+      isNormalUser = true;
+      initialPassword = "12345";
+      description = "Guillaume Labrie";
     };
   };
 }
-
