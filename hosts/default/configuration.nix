@@ -1,4 +1,4 @@
-# Ghil's NixOS config. Current setup does not support flakes or home-manager.
+# NixOS config with flakes and home-manager. Very messy.
 
 { config, pkgs, inputs, ... }:
 
@@ -153,20 +153,6 @@
     description = "Guillaume Labrie";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      cliphist
-      dmenu
-      element-desktop
-      firefox
-      floorp
-      google-chrome
-      hyprpaper
-      slack
-      telegram-desktop
-      xfce.thunar
-      vscode
-      waybar
-      wofi
-      wpsoffice
     ];
   };
 
