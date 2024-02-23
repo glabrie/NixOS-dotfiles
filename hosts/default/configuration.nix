@@ -94,13 +94,26 @@
   
   # Enable automatic login for the user.
 #  services.xserver.displayManager = {
-#    lightdm.enable = true;
+#    sddm.enable = true;
 #    autoLogin = {
 #      enable = true;
 #      user = "ghil";
 #      };
 #    };
-  services.xserver.displayManager.sddm.wayland.enable = true;
+#  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager = {
+      sddm = {
+          enable = true;
+          theme = "catppuccin-sddm-corners";
+          settings = {
+              AutoLogin = {
+                  Session = "hyprland";
+                  User = "ghil";
+                };
+            };
+        };
+    };
+#    
 # Enable the WM
   programs.hyprland.enable = true;
 
@@ -167,6 +180,7 @@
   environment.systemPackages = with pkgs; [
     acpi
     appimage-run
+    catppuccin-sddm-corners
     distrobox
     fastfetch
     git
