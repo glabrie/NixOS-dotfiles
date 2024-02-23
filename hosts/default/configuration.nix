@@ -93,14 +93,14 @@
   };
   
   # Enable automatic login for the user.
-  services.xserver.displayManager = {
-    sddm.enable = true;
-    autoLogin = {
-      enable = true;
-      user = "ghil";
-      };
-    };
-
+#  services.xserver.displayManager = {
+#    lightdm.enable = true;
+#    autoLogin = {
+#      enable = true;
+#      user = "ghil";
+#      };
+#    };
+  services.xserver.displayManager.sddm.wayland.enable = true;
 # Enable the WM
   programs.hyprland.enable = true;
 
