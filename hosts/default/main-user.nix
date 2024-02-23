@@ -20,7 +20,7 @@ in
     users.users.${cfg.userName} = {
       isNormalUser = true;
       initialPassword = "12345";
-      description = "Guillaume Labrie";
+      description = "ghil";
     };
   };
 }
