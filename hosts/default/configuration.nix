@@ -94,7 +94,7 @@
   
   # Enable automatic login for the user.
   services.xserver.displayManager = {
-    lightdm.enable = true;
+    sddm.enable = true;
     autoLogin = {
       enable = true;
       user = "ghil";
@@ -150,7 +150,7 @@
   # Userland
   users.users.ghil = {
     isNormalUser = true;
-    description = "Guillaume Labrie";
+    description = "ghil";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     ];
