@@ -17,6 +17,7 @@
     grimblast
     hyprpaper
     polkit_gnome
+    ranger
     slack
     telegram-desktop
     xfce.thunar
