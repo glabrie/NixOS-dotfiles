@@ -104,7 +104,6 @@
   services.xserver.displayManager = {
       sddm = {
           enable = true;
-          theme = "catppuccin-sddm-corners";
           settings = {
               AutoLogin = {
                   Session = "hyprland";
@@ -180,7 +179,6 @@
   environment.systemPackages = with pkgs; [
     acpi
     appimage-run
-    catppuccin-sddm-corners
     distrobox
     fastfetch
     git
