@@ -35,7 +35,7 @@
   };
 
   programs.home-manager.enable = true;
-{
+
   programs.starship = {
     enable = true;
     # Configuration written to ~/.config/starship.toml
@@ -50,5 +50,5 @@
       # package.disabled = true;
     };
   };
-}
+
 }
