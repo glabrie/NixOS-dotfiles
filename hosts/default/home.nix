@@ -11,7 +11,7 @@
     dmenu
     dunst
     element-desktop
-    floorp
+    nixpkgs-floorp.legacyPackages.x86_64-linux.floorp
     gh
     google-chrome
     grimblast
