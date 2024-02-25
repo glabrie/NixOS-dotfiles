@@ -92,15 +92,6 @@
     };
   };
   
-  # Enable automatic login for the user.
-#  services.xserver.displayManager = {
-#    sddm.enable = true;
-#    autoLogin = {
-#      enable = true;
-#      user = "ghil";
-#      };
-#    };
-#  services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager = {
       sddm = {
           enable = true;
@@ -137,6 +128,7 @@
   # NixOS Options
   programs.steam.enable = true;
   programs.htop.enable = true;
+  programs.zsh.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -164,6 +156,7 @@
     isNormalUser = true;
     description = "ghil";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
