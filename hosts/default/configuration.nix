@@ -9,16 +9,12 @@
       ./main-user.nix
       inputs.home-manager.nixosModules.default
   ];
-  
-  main-user.enable = true;
-  main-user.userName = "ghil";
 
-  # Support for Flakes and commands
+  # Support for Flakes and commands, Unfree
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Polkit?
+  # Gnome polkit
   security.polkit.enable = true;
   systemd = {
      user.services.polkit-gnome-authentication-agent-1 = {
@@ -36,11 +32,29 @@
     };
   }; 
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # NixOS is pretty good at being legible, but in case you forget...networking.
+  # Power Management for battery life
+  services.power-profiles-daemon.enable = false;
+  services.thermald.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_MIN_PERF_ON_AC = 0; 
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 20;
+
+    };
+  };
+
+  # Network
   networking = {
     hostName = "erebor";
     networkmanager.enable = true;
@@ -74,24 +88,7 @@
 
 };
 
-  # Power Management for battery life
-  services.power-profiles-daemon.enable = false;
-  services.thermald.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_MIN_PERF_ON_AC = 0; 
-      CPU_MAX_PERF_ON_AC = 100;
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 20;
-
-    };
-  };
-  
+  # Display Manager and autologin
   services.xserver.displayManager = {
       sddm = {
           enable = true;
@@ -103,7 +100,7 @@
             };
         };
     };
-#    
+
 # Enable the WM
   programs.hyprland.enable = true;
 
@@ -126,8 +123,6 @@
   };
 
   # NixOS Options
-  programs.steam.enable = true;
-  programs.htop.enable = true;
   programs.zsh.enable = true;
 
   fonts = {
@@ -163,14 +158,15 @@
     ];
   };
 
+  #Home manager
   home-manager = {
-    #also pass inputs to home-manager module
     extraSpecialArgs = { inherit inputs; };
     users = {
       "ghil" = import ./home.nix;
     };
   };
 
+  # Packages installed system wide
   environment.systemPackages = with pkgs; [
     acpi
     appimage-run
