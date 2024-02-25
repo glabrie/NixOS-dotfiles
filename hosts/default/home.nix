@@ -57,8 +57,6 @@
       flup = "nix flake update";
       update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
     };
-    histSize = 10000;
-    histFile = "${config.xdg.dataHome}/zsh/history";
 };
 
 }
