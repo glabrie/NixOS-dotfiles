@@ -54,7 +54,7 @@
     enable = true;
     shellAliases = {
       ll = "ls -l";
-      flup = "nix flake update"
+      flup = "nix flake update";
       update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
     };
     histSize = 10000;
