@@ -7,6 +7,9 @@
   
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    catppuccin-gtk
+    catppuccin-cursors
+    catppuccin-sddm-corners
     cliphist
     dmenu
     dunst
@@ -16,6 +19,7 @@
     google-chrome
     grimblast
     hyprpaper
+    nwg-look
     polkit_gnome
     ranger
     slack
