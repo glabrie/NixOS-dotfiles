@@ -11,7 +11,7 @@
     catppuccin
     catppuccin-gtk
     catppuccin-cursors
-    catppuccin-papyrus-folders
+    catppuccin-papirus-folders
     catppuccin-sddm-corners
     cliphist
     dmenu
