@@ -100,7 +100,7 @@
       flup = "nix flake update";
       update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
       collect-garbage = "nix-collect-garbage -d";
-      boot-garbage = "sudo /run/current-system/bin/switch-to-configuration boot"
+      boot-garbage = "sudo /run/current-system/bin/switch-to-configuration boot";
     };
 };
 
