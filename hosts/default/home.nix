@@ -10,8 +10,13 @@
       enable = true;
       font.name = "TeX Gyre Adventor 10";
       theme = {
-        name = "catppuccin-mocha";
-        package = pkgs.catppuccin-gtk;
+        name = "Catppuccin-Mocha-Compact-Mauve-Dark";
+        package = pkgs.catppuccin-gtk.override {
+          accents = [ "mauve" ];
+          size = "compact";
+          tweaks = [ "rimless" "black" ];
+          variant = "mocha";
+        };
       };
       iconTheme = {
         name = "Papirus-Dark";
@@ -43,7 +48,7 @@
     settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-	theme = "catppuccin-mocha";
+	theme = "Catppuccin-Mocha-Compact-Mauve-Dark";
       };
     };
   };
@@ -69,11 +74,11 @@
     papirus-icon-theme
     polkit_gnome
     ranger
+    rofi-wayland
     slack
     telegram-desktop
     xfce.thunar
     waybar
-    wofi
     wpsoffice
  ];
 
