@@ -54,7 +54,6 @@
     catppuccin
     catppuccin-gtk
     catppuccin-cursors
-    catppuccin-papirus-folders
     catppuccin-sddm-corners
     cliphist
     dmenu
