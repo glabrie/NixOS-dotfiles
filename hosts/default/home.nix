@@ -10,8 +10,8 @@
       enable = true;
       font.name = "TeX Gyre Adventor 10";
       theme = {
-        name = "Juno";
-        package = pkgs.juno-theme;
+        name = "catppuccin-mocha";
+        package = pkgs.catppuccin-gtk;
       };
       iconTheme = {
         name = "Papirus-Dark";
@@ -43,7 +43,7 @@
     settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-	theme = "Juno";
+	theme = "catppuccin-mocha";
       };
     };
   };
@@ -89,16 +89,8 @@
 
   programs.starship = {
     enable = true;
-    # Configuration written to ~/.config/starship.toml
+    enableZshIntegration = true;
     settings = {
-      # add_newline = false;
-
-      # character = {
-      #   success_symbol = "[➜](bold green)";
-      #   error_symbol = "[➜](bold red)";
-      # };
-
-      # package.disabled = true;
     };
   };
   programs.zsh = {
@@ -107,6 +99,8 @@
       ll = "ls -l";
       flup = "nix flake update";
       update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
+      collect-garbage = "nix-collect-garbage -d";
+      boot-garbage = "sudo /run/current-system/bin/switch-to-configuration boot"
     };
 };
 
