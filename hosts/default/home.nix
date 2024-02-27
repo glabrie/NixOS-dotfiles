@@ -7,8 +7,11 @@
   
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    bottom
+    catppuccin
     catppuccin-gtk
-    catppuccin-cursors
+    catppuiccin-cursors
+    catppuccin-papyrus-folders
     catppuccin-sddm-corners
     cliphist
     dmenu
