@@ -10,7 +10,7 @@
     bottom
     catppuccin
     catppuccin-gtk
-    catppuiccin-cursors
+    catppuccin-cursors
     catppuccin-papyrus-folders
     catppuccin-sddm-corners
     cliphist
