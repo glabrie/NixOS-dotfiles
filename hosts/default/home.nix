@@ -79,6 +79,7 @@
     telegram-desktop
     xfce.thunar
     waybar
+    w3m
     wpsoffice
  ];
 
