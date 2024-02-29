@@ -70,7 +70,7 @@
     grimblast
     hyprpaper
     juno-theme
-    nwg-look
+    ncspot
     papirus-icon-theme
     polkit_gnome
     ranger
