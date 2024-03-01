@@ -102,7 +102,7 @@
 
 # Enable the WM
   programs.hyprland.enable = true;
-  services.xserver.desktopManager.plasma6.enable
+  services.xserver.desktopManager.plasma6.enable;
 # Keymap
   services.xserver.xkb = {
     layout = "us,ca";
