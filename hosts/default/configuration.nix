@@ -55,7 +55,7 @@
 
   # Network
   networking = {
-    hostName = "erebor";
+    hostName = "aurora";
     networkmanager.enable = true;
   };
 
