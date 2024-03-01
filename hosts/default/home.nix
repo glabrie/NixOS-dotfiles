@@ -60,6 +60,7 @@
     catppuccin-gtk
     catppuccin-cursors
     catppuccin-sddm-corners
+    cava
     cliphist
     dmenu
     dunst
