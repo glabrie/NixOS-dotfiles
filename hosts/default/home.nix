@@ -75,7 +75,6 @@
     ncspot
     papirus-icon-theme
     polkit_gnome
-    partition-manager
     ranger
     rofi-wayland
     slack
