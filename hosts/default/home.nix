@@ -54,6 +54,7 @@
   };
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    atuin
     bibata-cursors
     bottom
     catppuccin
