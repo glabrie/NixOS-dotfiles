@@ -34,7 +34,8 @@
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
   # Power Management for battery life
   services.power-profiles-daemon.enable = false;
   services.thermald.enable = true;
