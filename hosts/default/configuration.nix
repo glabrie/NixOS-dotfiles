@@ -88,22 +88,21 @@
 };
 
   # Display Manager and autologin
- # services.xserver.displayManager = {
- #     sddm = {
- #         enable = true;
- #         settings = {
- #             AutoLogin = {
- #                 Session = "hyprland";
- #                 User = "ghil";
- #               };
- #           };
- #       };
- #   };
+  services.xserver.displayManager = {
+      sddm = {
+          enable = true;
+          settings = {
+              AutoLogin = {
+                  Session = "hyprland";
+                  User = "ghil";
+                };
+            };
+        };
+    };
 
 # Enable the WM
   programs.hyprland.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 # Keymap
   services.xserver.xkb = {
     layout = "us,ca";
