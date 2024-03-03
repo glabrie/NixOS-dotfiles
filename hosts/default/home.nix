@@ -69,7 +69,7 @@
     floorp
     gh
     google-chrome
-    gnome-tweaks
+    gnome.gnome-tweaks
     grimblast
     hyprpaper
     juno-theme
