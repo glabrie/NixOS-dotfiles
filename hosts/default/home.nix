@@ -109,6 +109,10 @@
       update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
       collect-garbage = "nix-collect-garbage -d";
       boot-garbage = "sudo /run/current-system/bin/switch-to-configuration boot";
+      dots ="cd ~/.dotfiles/";
+      ga = "git add *";
+      gc = "git commit --verbose";
+      gp = "git push";
     };
 };
 
