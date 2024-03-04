@@ -104,15 +104,16 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      ll = "ls -l";
-      flup = "nix flake update";
-      update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
-      collect-garbage = "nix-collect-garbage -d";
       boot-garbage = "sudo /run/current-system/bin/switch-to-configuration boot";
+      collect-garbage = "nix-collect-garbage -d";
       dots ="cd ~/.dotfiles/";
+      flup = "nix flake update";
       ga = "git add *";
       gc = "git commit --verbose";
       gp = "git push";
+      ll = "ls -l";
+      v = "nvim";
+      update = "sudo nixos-rebuild switch --flake ~/.dotfiles/#default";
     };
 };
 
