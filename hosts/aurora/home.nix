@@ -80,7 +80,7 @@
     slack
     telegram-desktop
     xfce.thunar
-    vscode
+    vscode-with-extensions
     waybar
     w3m
     wpsoffice
