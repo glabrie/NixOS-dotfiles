@@ -6,42 +6,42 @@
   home.stateVersion = "23.11"; # do not change please.
  
   # GTK
-    gtk = {
-      enable = true;
-      font.name = "TeX Gyre Adventor 10";
-      theme = {
-        name = "Catppuccin-Mocha-Compact-Mauve-Dark";
-        package = pkgs.catppuccin-gtk.override {
-          accents = [ "mauve" ];
-          size = "compact";
-          tweaks = [ "rimless" "black" ];
-          variant = "mocha";
-        };
-      };
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
-      };
-      cursorTheme = {
-          name = "Bibata-Modern-Classic";
-          package = pkgs.bibata-cursors;
-        };
-
+#    gtk = {
+#      enable = true;
+#      font.name = "TeX Gyre Adventor 10";
+#      theme = {
+#        name = "Catppuccin-Mocha-Compact-Mauve-Dark";
+#        package = pkgs.catppuccin-gtk.override {
+#          accents = [ "mauve" ];
+#          size = "compact";
+#          tweaks = [ "rimless" "black" ];
+#          variant = "mocha";
+#        };
+#      };
+#      iconTheme = {
+#        name = "Papirus-Dark";
+#        package = pkgs.papirus-icon-theme;
+#      };
+#      cursorTheme = {
+#          name = "Bibata-Modern-Classic";
+#          package = pkgs.bibata-cursors;
+#        };
+#
       gtk3.extraConfig = { 
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        gtk-cursor-theme-name=Bibata-Modern-Classic
-      '';
-      };
-
-      gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        gtk-cursor-theme-name=Bibata-Modern-Classic
-      '';
-      };
-
-   };
+#      Settings = ''
+#        gtk-application-prefer-dark-theme=1
+#        gtk-cursor-theme-name=Bibata-Modern-Classic
+#      '';
+#      };
+#
+#      gtk4.extraConfig = {
+#      Settings = ''
+#        gtk-application-prefer-dark-theme=1
+#       gtk-cursor-theme-name=Bibata-Modern-Classic
+#      '';
+#      };
+#
+#   };
   #gnome outside gnome
   dconf = {
     enable = true;
