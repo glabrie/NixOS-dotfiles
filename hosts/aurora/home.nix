@@ -27,7 +27,7 @@
 #          package = pkgs.bibata-cursors;
 #        };
 #
-      gtk3.extraConfig = { 
+#      gtk3.extraConfig = { 
 #      Settings = ''
 #        gtk-application-prefer-dark-theme=1
 #        gtk-cursor-theme-name=Bibata-Modern-Classic
