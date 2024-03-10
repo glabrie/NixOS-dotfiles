@@ -63,6 +63,7 @@
     catppuccin-sddm-corners
     cava
     cliphist
+    discord
     dmenu
     dunst
     element-desktop
@@ -72,6 +73,7 @@
     grimblast
     hyprpaper
     juno-theme
+    kde-rounded-corners
     ncspot
     papirus-icon-theme
     polkit_gnome
