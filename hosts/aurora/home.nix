@@ -79,6 +79,7 @@
     ncspot
     papirus-icon-theme
     polkit_gnome
+    qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
     ranger
     rofi-wayland
