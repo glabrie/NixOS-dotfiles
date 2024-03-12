@@ -59,6 +59,8 @@
     bottom
     catppuccin
     catppuccin-gtk
+    catppuccin-kde
+    catppuccin-kvantum
     catppuccin-cursors
     catppuccin-sddm-corners
     cava
@@ -77,6 +79,7 @@
     ncspot
     papirus-icon-theme
     polkit_gnome
+    qtstyleplugin-kvantum
     ranger
     rofi-wayland
     slack
