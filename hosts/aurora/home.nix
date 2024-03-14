@@ -1,3 +1,4 @@
+# nixOS home-manager config
 { config, pkgs, ... }:
 
 {
@@ -5,64 +6,11 @@
   home.homeDirectory = "/home/ghil";
   home.stateVersion = "23.11"; # do not change please.
  
-  # GTK
-#    gtk = {
-#      enable = true;
-#      font.name = "TeX Gyre Adventor 10";
-#      theme = {
-#        name = "Catppuccin-Mocha-Compact-Mauve-Dark";
-#        package = pkgs.catppuccin-gtk.override {
-#          accents = [ "mauve" ];
-#          size = "compact";
-#          tweaks = [ "rimless" "black" ];
-#          variant = "mocha";
-#        };
-#      };
-#      iconTheme = {
-#        name = "Papirus-Dark";
-#        package = pkgs.papirus-icon-theme;
-#      };
-#      cursorTheme = {
-#          name = "Bibata-Modern-Classic";
-#          package = pkgs.bibata-cursors;
-#        };
-#
-#      gtk3.extraConfig = { 
-#      Settings = ''
-#        gtk-application-prefer-dark-theme=1
-#        gtk-cursor-theme-name=Bibata-Modern-Classic
-#      '';
-#      };
-#
-#      gtk4.extraConfig = {
-#      Settings = ''
-#        gtk-application-prefer-dark-theme=1
-#       gtk-cursor-theme-name=Bibata-Modern-Classic
-#      '';
-#      };
-#
-#   };
-  #gnome outside gnome
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-	theme = "Catppuccin-Mocha-Compact-Mauve-Dark";
-      };
-    };
-  };
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    # Apps
     atuin
-    bibata-cursors
     bottom
-    catppuccin
-    catppuccin-gtk
-    catppuccin-kde
-    catppuccin-kvantum
-    catppuccin-cursors
-    catppuccin-sddm-corners
     cava
     cliphist
     discord
@@ -74,10 +22,7 @@
     google-chrome
     grimblast
     hyprpaper
-    juno-theme
-    kde-rounded-corners
     ncspot
-    papirus-icon-theme
     polkit_gnome
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
@@ -91,6 +36,19 @@
     w3m
     wpsoffice
     yakuake
+
+    # Ricing
+    bibata-cursors
+    catppuccin
+    catppuccin-gtk
+    catppuccin-kde
+    catppuccin-kvantum
+    catppuccin-cursors
+    catppuccin-sddm-corners
+    juno-theme
+    kde-rounded-corners
+    papirus-icon-theme
+
  ];
 
   home.file = {
