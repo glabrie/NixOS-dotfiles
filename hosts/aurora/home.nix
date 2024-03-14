@@ -11,7 +11,6 @@
     # Apps
     atuin
     bottom
-    blueman
     cava
     cliphist
     discord
