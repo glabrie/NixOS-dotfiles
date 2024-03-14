@@ -90,6 +90,7 @@
     waybar
     w3m
     wpsoffice
+    yakuake
  ];
 
   home.file = {
