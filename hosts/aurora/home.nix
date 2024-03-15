@@ -29,6 +29,7 @@
     ranger
     rofi-wayland
     slack
+    tana
     telegram-desktop
     xfce.thunar
     vscode-with-extensions
