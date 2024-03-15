@@ -23,6 +23,7 @@
     grimblast
     hyprpaper
     ncspot
+    nwg-look
     polkit_gnome
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
