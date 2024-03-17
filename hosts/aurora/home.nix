@@ -20,6 +20,7 @@
     floorp
     gh
     google-chrome
+    gnome.gnome-tweaks
     grimblast
     hyprpaper
     ncspot
