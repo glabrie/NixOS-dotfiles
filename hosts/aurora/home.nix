@@ -23,33 +23,19 @@
     grimblast
     hyprpaper
     ncspot
-    nwg-look
-    polkit_gnome
-    libsForQt5.qtstyleplugin-kvantum
-    qt6Packages.qtstyleplugin-kvantum
     ranger
     rofi-wayland
     slack
     tana
     telegram-desktop
-    xfce.thunar
     vscode-with-extensions
     waybar
     w3m
     wpsoffice
-    yakuake
 
     # Ricing
-    bibata-cursors
     catppuccin
     catppuccin-gtk
-    catppuccin-kde
-    catppuccin-kvantum
-    catppuccin-cursors
-    catppuccin-sddm-corners
-    juno-theme
-    kde-rounded-corners
-    papirus-icon-theme
 
  ];
 
