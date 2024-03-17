@@ -37,6 +37,12 @@
     # Ricing
     catppuccin
     catppuccin-gtk
+    
+    # Gnome Extensions
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
+
 
  ];
 
