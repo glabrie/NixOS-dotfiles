@@ -17,6 +17,7 @@
     dmenu
     dunst
     element-desktop
+    fractal
     floorp
     gh
     google-chrome
